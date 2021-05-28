@@ -7,6 +7,8 @@ const rl = readline.createInterface({
 });
 
 console.log(chalk.yellowBright("Lets Quiz on Bhagavat Gita! "));
+console.log();
+console.log(chalk.yellowBright("Give your answer only in the following options- 'a','b','c','d "));
 
 const quesBank = [
   {
@@ -76,6 +78,7 @@ function question(){
       serve();
     } else{
       console.log(chalk.red('Wrong answer'))
+      console.log(chalk.yellowBright('Right answer is',quesBank[questionIndex].answer.toLowerCase() ))
       questionIndex++;
       serve();
 
